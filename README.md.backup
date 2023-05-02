@@ -12,8 +12,7 @@ Start new Project at Intellij- New Project From VCS
 2nd, create, same name project at our gitHub
 
 3rd, locally, at our project directory:
-
-**which git remote?**
+**which git remote**
 ```
 git remote -v   
 origin	https://github.com/amigoscode/java-functional-programming.git (fetch)
