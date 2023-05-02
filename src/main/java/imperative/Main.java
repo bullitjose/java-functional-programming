@@ -34,7 +34,7 @@ public class Main {
 
         System.out.println("// Declarative approach");
         // Declarative approach
-
+        //Predicate of filter
         Predicate<Person> personPredicate = person -> FEMALE.equals(person.gender);
 
         List<Person> females2 = people.stream()
