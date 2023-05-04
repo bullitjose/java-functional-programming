@@ -16,34 +16,38 @@ public class _Function {
         int multiply = multiplyBy10Function.apply(increment2);
         System.out.println(multiply);
 
+        //Chaining functions
         Function<Integer, Integer> addBy1AndThenMultiplyBy10 =
                 incrementByOneFunction.andThen(multiplyBy10Function);
         System.out.println(addBy1AndThenMultiplyBy10.apply(4));
 
+
         // BiFunction takes 2 argument and produces 1 result
+        //Using a normal java function
         System.out.println(
                 incrementByOneAndMultiply(4, 100)
         );
-
+        //Using a BiFunction
         System.out.println(
                 incrementByOneAndMultiplyBiFunction.apply(4, 100)
         );
 
     }
-
+    //Function, take one input
     static Function<Integer, Integer> incrementByOneFunction =
             number -> number + 1;
 
+    //Function, take one input
     static Function<Integer, Integer> multiplyBy10Function = number -> number * 10;
 
     static int incrementByOne(int number) {
         return number + 1;
     }
-
+    //BiFunction, takes 2 inputs, its the same as method incrementByOneAndMultiply
     static BiFunction<Integer, Integer, Integer> incrementByOneAndMultiplyBiFunction =
             (numberToIncrementByOne, numberToMultiplyBy)
                     -> (numberToIncrementByOne + 1) * numberToMultiplyBy;
-
+    //Methods works as the BiFunction incrementByOneAndMultiplyBiFunction
     static int incrementByOneAndMultiply(int number, int numToMultiplyBy) {
         return (number + 1) * numToMultiplyBy;
     }

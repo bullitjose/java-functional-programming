@@ -27,11 +27,11 @@ public class _Predicate {
         );
 
     }
-
+    //A normal java function
     static boolean isPhoneNumberValid(String phoneNumber) {
         return phoneNumber.startsWith("07") && phoneNumber.length() == 11;
     }
-
+    //Functional way, using Predicate
     static Predicate<String> isPhoneNumberValidPredicate = phoneNumber ->
             phoneNumber.startsWith("07") && phoneNumber.length() == 11;
 
