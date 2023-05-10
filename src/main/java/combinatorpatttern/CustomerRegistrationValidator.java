@@ -37,9 +37,9 @@ public interface CustomerRegistrationValidator
     }
 
     enum ValidationResult {
-        SUCCESS,
-        PHONE_NUMBER_NOT_VALID,
-        EMAIL_NOT_VALID,
-        IS_NOT_AN_ADULT
+        SUCCESS,//no errors
+        PHONE_NUMBER_NOT_VALID,//phone number error
+        EMAIL_NOT_VALID,//email error
+        IS_NOT_AN_ADULT//age number error
     }
 }

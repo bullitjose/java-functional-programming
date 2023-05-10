@@ -317,4 +317,8 @@ public static List<Person> search(List<Person> people, String name, Optional<Int
 
 **Package combinatorpattern, need to perform some kind of validation over Customer class.**
 CustomerValidatorService, with mehtods to validate few properties of a customer.
+**Combinator is a higher-order function that uses only function application and earlier defined combinators to define a result from its argument**The combinator allows you to create new "things" from previously defined "things".
 
+>Implementing combinator pattern
+We create interface CustomerRegistrationValidator where we **combinate diferenet function to validate results**
+1:46:40

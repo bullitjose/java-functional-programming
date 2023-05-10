@@ -17,3 +17,5 @@ Q
 .src/main/java/combinatorpatttern/Customer.java,9/4/94d4f3e90aec2d2c6dd41583e9ac4130b6f52b8c
 n
 >src/main/java/combinatorpatttern/CustomerValidatorService.java,c/f/cf4f4b53587fab4dfbfabd9ab3472e048f36a649
+s
+Csrc/main/java/combinatorpatttern/CustomerRegistrationValidator.java,f/2/f20f0d7c799fffb2b6863be6fec0a79d8d69ca6f

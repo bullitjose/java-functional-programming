@@ -16,7 +16,7 @@ public class CustomerValidatorService {
     private boolean isAdult(LocalDate dob) {
         return Period.between(dob, LocalDate.now()).getYears() > 16;
     }
-
+    //Combine all validations
     public boolean isValid(Customer customer) {
         return isEmailValid(customer.getEmail()) &&
                 isPhoneNumberValid(customer.getPhoneNumber()) &&
