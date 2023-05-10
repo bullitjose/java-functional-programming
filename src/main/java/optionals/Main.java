@@ -116,9 +116,11 @@ public class Main {
 
 
         //Optional with Class Person
-        System.out.println("\nOptional with class Person");
+        System.out.println("\nOptional with class Person, email not null");
         Person person = new Person("james","JAMESs@gmail.com");
-        System.out.println(person.getEmail().toLowerCase());
+        System.out.println(person
+                .getEmail()
+                .map(String::toLowerCase));
 
         //Salta excepcio si email es null
         /*
@@ -129,10 +131,11 @@ public class Main {
         //Solució modificar el getEmail que retorni Optional
 
         //Optional with Class Person and optional al getEmail
-        System.out.println("\nOptional with class Person");
+        System.out.println("\nOptional with class Person, email is null");
         Person person3= new Person("james",null);
         String email=person3
                 .getEmail()
+                .map(String::toLowerCase)
                 .orElse("email not provided");
 
         System.out.println(email);

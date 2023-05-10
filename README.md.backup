@@ -274,3 +274,38 @@ There is only females?:
 
 >Java Optionals
 
+[Java optional](https://www.youtube.com/watch?v=1xCxoOuDZuU&ab_channel=Amigoscode)
+
+Class Optional<T> , T is type of value . **Optioanl is container object which may or may not contain a non-null value**
+
+Methods:
+- ofNullable(T value) ; Returns an Optional describing the given value, if non-null, otherwise returns an empty Optional.
+- orElseThrow(); If a value is present, returns the value, otherwise throws NoSuchElementException.
+- map(Function<? super T,? extends U> mapper); If a value is present, returns an Optional describing (as if by ofNullable(T)) the result of applying the given mapping function to the value, otherwise returns an empty Optional.
+- 
+ifPresentOrElse(Consumer<? super T> action, Runnable emptyAction); If a value is present, performs the given action with the value, otherwise performs the given empty-based action.
+**Opcional s'ha d'utilitzar com a tipus de retorn. No es recomana intentar utilitzar-lo com a tipus de camp :**
+```
+public Optional<String> getEmail() {
+            //return email; //no controla null!!
+            return Optional.ofNullable(email);
+        }
+```
+
+**Quan no tornar Optional**
+[No return Optional](ttps://www.baeldung.com/java-optional-return)
+-Serialització
+-JSon
+-JPA
+-Llenguatges d'expressió
+
+**Us indegut, passar un paràmetre Optional a un mètode**
+```
+public static List<Person> search(List<Person> people, String name, Optional<Integer> age) {
+    // Null checks for people and name
+    return people.stream()
+            .filter(p -> p.getName().equals(name))
+            .filter(p -> p.getAge().get() >= age.orElse(0))
+            .collect(Collectors.toList());
+}
+```
