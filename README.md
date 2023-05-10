@@ -285,7 +285,7 @@ Methods:
 - orElseThrow(); If a value is present, returns the value, otherwise throws NoSuchElementException.
 - map(Function<? super T,? extends U> mapper); If a value is present, returns an Optional describing (as if by ofNullable(T)) the result of applying the given mapping function to the value, otherwise returns an empty Optional.
 - 
-ifPresentOrElse(Consumer<? super T> action, Runnable emptyAction); If a value is present, performs the given action with the value, otherwise performs the given empty-based action.
+ifPresentOrElse(Consumer<? super T> action, Runnable emptyAction);  If a value is present, performs the given action with the value, otherwise performs the given empty-based action.
 **Opcional s'ha d'utilitzar com a tipus de retorn. No es recomana intentar utilitzar-lo com a tipus de camp :**
 ```
 public Optional<String> getEmail() {
@@ -311,3 +311,11 @@ public static List<Person> search(List<Person> people, String name, Optional<Int
             .collect(Collectors.toList());
 }
 ```
+
+>Combinator pattern
+[Supplier=()->"Combinator pattern"](https://www.youtube.com/watch?v=VRpHdSFWGPs&ab_channel=Amigoscode)
+
+**Package combinatorpattern, need to perform some kind of validation over Customer class.**
+CustomerValidatorService, with mehtods to validate few properties of a customer.
+1:34:22
+
